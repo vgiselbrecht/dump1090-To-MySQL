@@ -81,7 +81,7 @@ if [ "${arr_vert[ident]}" = "" ]; then arr_vert[ident]="NULL"; fi
 
 last_position="_${arr_alti[ident]}_${arr_velo[ident]}_${arr_trck[ident]}_${arr_lat[ident]}_${arr_lon[ident]}_${arr_vert[ident]}_$f7_${arr_call[ident]}"
 
-if [ ident != "" ]; then
+if [ $f5 != "" ]; then
 if [ -z ${arr_last_position[ident]+"check"} ] || [ ${arr_last_position[ident]} != $last_position ]; then  #if it is same record as before
 echo "Position Point received for $f5 ${arr_call[ident]} at alt ${arr_alti[ident]}"
 
